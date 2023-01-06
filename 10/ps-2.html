@@ -82,12 +82,14 @@
     } */
   
     #signup input:not([type=radio]) {
+      /* 타입이 radio아닌거에만 적용 */
       border: 1px solid #ccc;
       border-radius: 3px;
       padding: 5px;
       width: 200px;
     }
     #signup input:not([type=radio]):hover {
+      /* 타입이 radio 아닌거에만 적용 */
       border-color: #f00;
     }
     #signup input:checked + label {  /* input 요소에 checked 속성이 추가되었을 때 label 요소의 스타일 */
@@ -145,7 +147,7 @@
             <label for="basic">기본형(최대 2인)</label>
           <li>      
           <li>
-            <input type="radio" name="room" id="family">
+            <input type="radio" name="room" id="family" >
             <label for="family">가족형(최대 8인)</label>
           </li>          
         </ul>

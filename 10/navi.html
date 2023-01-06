@@ -25,14 +25,18 @@
     padding:10px;   
   }
   .navi a:link, .navi a:visited{
+    /* 링크랑 이미 방문한 사이트라면*/
     display:block;
     font-size:14px;
     color:#000;
+    /* 글자색을 검정으로 바꿔라, 원래는 파란색으로 되어있음 
+    그래서 링크가 되어있든, 링크된 사이트를 방문했든 검정색으로 계속 남아있다.*/
     padding: 10px; 
     text-decoration: none;  /* 밑줄 없앰 */
     text-align: center;
   }
   .navi a:hover,  .navi a:focus {
+    /* tab 누르면 커서 이동 -> 포커스라고 함. */
     background-color:#222;  /* 배경 색 */
     color:#fff;  /* 글자 색 */
   }
@@ -46,7 +50,7 @@
 <div class="container">
     <nav class="navi">
       <ul>
-        <li><a href="#">이용 안내</a></li>
+        <li><a href="https://www.naver.com/">이용 안내</a></li>
         <li><a href="#">객실 소개</a></li>
         <li><a href="#">예약 방법 및 요금</a></li>
         <li><a href="#">예약하기</a></li>

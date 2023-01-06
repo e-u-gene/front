@@ -11,13 +11,22 @@
     ul li {
       margin:15px;
     }
-    li.new::after {
-      content:"NEW!!";
+    li.hot::after {
+      content:"hot!!";
       font-size:x-small;
       padding:2px 4px;
       margin: 0 10px;
-      border-radius:2px;
+      border-radius:5px;
       background:#f00;
+      color:#fff;
+    }
+    li.new::before {
+      content:"new!!";
+      font-size:x-small;
+      padding:2px 4px;
+      margin: 0 10px;
+      border-radius:5px;
+      background:rgb(255, 123, 0);
       color:#fff;
     }
   </style>
@@ -28,7 +37,7 @@
     <h1>제품 목록</h1>
     <ul>
       <li class="new">제품 A</li>
-      <li>제품 B</li>
+      <li class="hot">제품 B</li>
       <li>제품 C</li>
       <li class="new">제품 D</li>
     </ul>
