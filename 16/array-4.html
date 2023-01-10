@@ -11,20 +11,30 @@
     // 인수가 1개일 경우
     var numbers = [1, 2, 3, 4, 5];
     var newNumbers = numbers.splice(2);
+    // 기존 배열에서 1번 값 2번값 빼고 3번값부터 반환시킴
     document.write("반환된 배열 : " + newNumbers + "<br>" );
+
+    // 따라서 기존 배열엔 1번값과 2번값만 남아있음
     document.write("변경된 배열 : " + numbers );
     document.write("<hr>");
 
     // 인수가 2개일 경우
     var study = ["html", "css", "web", "jquery"];
+    // 배열 두번째 값지나고부터 1개만 가져오겠다는것
     var newStudy = study.splice(2,1);
+    
+    //따라서 반환된 배열엔 web만 존재하고
     document.write("반환된 배열 : " + newStudy + "<br>");
+    // 기존 배열에선 web이 빠진다.
     document.write("변경된 배열 : " + study);
     document.write("<hr>");
 
     // 인수가 3개 이상일 경우
     var newStudy2 = study.splice(2, 1, "js");
+    // 위에서 변경된 study =  html,css,jquery에서 배열 두번째 값지나고 1개 가져옴
+    // 따라서 jquery가 반환되며
     document.write("반환된 배열 : " + newStudy2 + "<br>");
+    // 그 뒤에 js 집어넣겠다고 한것이므로 study 배열에는 html,css,js 값이 있다.
     document.write("변경된 배열 : " + study);
 	</script>
 </body>

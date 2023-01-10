@@ -8,9 +8,10 @@
 <body>
   <script>
     function calcSum(n) {
-      let sum = 0;
+      let sum = 0;// 중괄호 내에서만 사용하며, 중괄호 내부에서 전역변수처럼 사용됨.
       for(let i = 1; i < n + 1; i++) {						
         sum += i;	
+        //i 도 중괄호 내에서만 사용
       }      
       console.log(sum);
     }    

@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>What time is it?</title>
 	<style>
 		body {
-			font-size:2em;
+			font-size: 2em;
 			text-align: center;
 		}
 	</style>
 </head>
+
 <body>
 	<script>
-		var now = new Date();
-		document.write("현재 시각은 " + now.toLocaleString()) ;	// 로컬 형식으로 표시하기
+		let now = new Date();
+		document.write(`<p>현재 시각은 ${now}</p>`);
+		document.write(`현재 시각은 ${now.toLocaleString()}`);
+		// 현재지역에 따라서 시간을 바꿔줌.
 	</script>
 </body>
-</html>
 
+</html>

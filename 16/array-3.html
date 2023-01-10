@@ -8,38 +8,36 @@
 </head>
 <body>
 	<script>
-		var nums = [1, 2, 3];
-		var chars = ["a", "b", "c", "d"];
+		let nums = [1, 2, 3];
+		let chars = ["a","b","c","f"];
 
-		// 두 개의 배열 합치기
-		var numsChars = nums.concat(chars);
-		var charsNums = chars.concat(nums);
-		document.write("nums에 chars 합치면 : ", numsChars, "<br> chars에 nums 합치면 : ", charsNums);
+		// 두 배열 합치기 : concat
+		let numsChars = nums.concat(chars);
+		document.write(`chars에 nums 합치면: ${numsChars}`);
 		document.write("<hr>");
+		
+		// 배열 내 요소 합치기 : join
+		let string1 = nums.join('-'); // 문자열로 조인시킴
+		document.write(`<p> ${nums} </p>`);
+		document.write(`구분자 -으로 문자열 조인 ${string1}`);
+		document.write("<hr>");
+		
+		// 요소 추가하기 : push()
+		let ret1 = nums.push(4,5);
+		document.write(`기존 nums배열 끝에 4,5가 추가된 ${nums} 출력`);
+		document.write(`<p>길이가 반환되는 ret1 ${ret1}</p>`);
+		document.write("<hr>");
+		
 
-		// 배열 내의 요소 합치기
-		var string1 = nums.join();
-		document.write("구분자 없이 : ", string1);
-		document.write("<br>");
-		var string2 = chars.join('/');
-		document.write("/ 구분자 지정 : ", string2);
-		document.write("<hr>");
+		// 요소 추출 : pop()
+		let pop1 = chars.pop(); // 마지막 요소를 가져옴
+		document.write(`마지막 요소를 꺼내오는 pop,,,핀 뿌셔,,, ->${pop1}`)
+		let pop2 = chars.shift(); // 첫 번째 요소 가져옴
+		document.write(`<p>첫번째 요소를 가져오는 shift,,,온몸으로 뿌셔뿌셔 -> ${pop2}</p>`)
+		document.write(`<p>나머지 요소를 가져오기-> ${chars}</p>`)
+		// 앞에거 빠지고 뒤에꺼 빠져서 배열에는 그 나머지 값들만 존재,,
+		// pop과 shift는 배열의 길이를 변화시킨다.
 
-		// 요소 추가 - 새로운 length 값 반환
-		var ret1 = nums.push(4, 5);  // 배열 끝에 추가
-		document.write("length : ", ret1, " | 배열 : ", nums);  		
-		document.write("<br>");
-		var ret2 = nums.unshift(0);  // 배열 앞에 추가
-		document.write("length : ", ret2, " | 배열 : ", nums);
-		document.write("<hr>");
-
-		// 요소 추출 - 꺼낸 요소 반환
-		var popped1 = chars.pop(); // 마지막 요소 꺼냄
-		document.write("꺼낸 요소 : ", popped1, " | 배열 : ", chars); 
-		document.write("<br>");
-		var popped2 = chars.shift(); // 첫번째 요소 꺼냄
-		document.write("꺼낸 요소 : ", popped2, " | 배열 : ", chars);
-		document.write("<hr>");
-	</script>
+		</script>
 </body>
 </html>

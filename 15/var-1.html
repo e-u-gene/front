@@ -6,12 +6,14 @@
   <title>var 예약어로 지역 변수 선언하기</title>
 </head>
 <body>
-	<script>		
-		function addNumber() { 								
-			var sum = 10 + 20;			
-		}
-    addNumber();
-    console.log(sum);    
+	<script>
+  var sum = 2; // 전역변수		
+    function addNum(){
+      var sum = 10 + 20; // 지역변수
+    }
+    addNum();
+    console.log(sum); // 콘솔창에 2가 뜸.
+    //즉 지역변수 sum과 전역변수 sum은 다르게 취급.
   </script>
 </body>
 </html>

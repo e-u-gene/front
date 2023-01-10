@@ -7,14 +7,20 @@
 </head>
 <body>
   <script>
+    let sum = 0;
+    // 얘는 전역변수 
     function calcSum(n) {
-      sum = 0;
+       let sum = 0; // 얘는 블록변수. 
       for(let i = 1; i < n + 1; i++) {						
         sum += i;	
-      }            
+      }      
+  
+      console.log(`sum = ${sum}`);     
+      // 55가 출력되고
     }    
     calcSum(10);    
     console.log(sum);
+    // 얘는 0이 출력.
   </script>
 </body>
 </html>

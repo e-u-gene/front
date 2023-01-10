@@ -7,14 +7,13 @@
 </head>
 <body>
   <script>		 
-    var x = 10;
-
-		function displayNumber() { 								
-      console.log("x is " + x);
-      console.log("y is " + y);      
-      var y = 20;
-		}
-    displayNumber();
+    var x = 30; // 전역변수
+    function disNum(){
+      console.log(`x is ${x}`);
+      console.log(`y is ${y}`); // 콘솔 출력시 undefined라고 나옴
+      var y = 80; // y를 console.log(`y is ${y}`); 위로 올랴주면 y값이 출력되긴 함.
+    }
+    disNum();
   </script>
 </body>
 </html>

@@ -7,7 +7,16 @@
 </head>
 <body>
   <script>
-
+		var x = prompt("첫번째 값을 입력하세요")
+		var y = prompt("두번째 값을 입력하세요")
+		function sumMulti(x,y){
+			if(x === y){
+				return parseInt(x) * parseInt(y);
+			}
+			else 
+			return parseInt(x) + parseInt(y);
+		}
+		console.log(sumMulti(x,y));
   </script>
 </body>
 </html>
