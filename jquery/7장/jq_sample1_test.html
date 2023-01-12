@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title> 선택자 </title>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+   // 라이브러리를 가져와야 $예약어를 읽을 수 있음.
+   //$(document).ready(); -> document가 다 준비되면 ready() 괄호안의 이벤트가 시작!
+   // 즉, 밑에 있는 function이 저 ready() 사이에 들어가있다고 보면 된다..
+   // ready(function(){}) 이라는 뜻...
+   // function은 $(document).ready()를 스킵하고 쓴거임.
+   //앞으로 jquery는 $(); 형식으로 쓸 것임...
+$(function(){
+   $("h1").css("color","#BB2649")
+   // document.querySelector("h1").style.color = "red";
+   // 위 코드는 자바스크립트로 작성해본 방식~
+  
+});
+//]]>
+</script>
+ </head>
+<body>
+   <h1>제이쿼리</h1>
+</body>
+</html>
