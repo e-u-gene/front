@@ -30,8 +30,11 @@
 		<div id="display">
 			<script>
 				document.write("<p><b>location.href : </b>" + location.href + "</p>");
+				// 사용자가 입력한 주소를 서버쪽에서 읽어서 표시
 				document.write("<p><b>location.host : </b>" + location.host + "</p>");
+				// http://127.0.0.1:5500/ -> 을 의미
 				document.write("<p><b>location.protocol : </b>" + location.protocol + "</p>");
+				// url의 프로토콜을 지정
 			</script>		
 		</div>
 		<button onclick="location.replace('http://www.easyspub.com')">이지스퍼블리싱 홈페이지로 이동하기</button>

@@ -18,7 +18,17 @@
   <div id="container">
     <h1>이벤트 공지</h1>
     <img src="images/doit.jpg">
-    <p><a href="doit-main.html">자세히 보기</a></p>  
+    <p><a href="doit-main.html" onclick="loadURL(this.href); return false">자세히 보기</a></p>  
+    <!-- <p><a href="doit-main.html" target ="parent" onclick="close()" return false;>자세히 보기</a></p>   -->
   </div>
+    
+    <script>
+      function loadURL(url){
+        window.opener.loacation.href =url;
+        // window.opener -> this.href를 저장하며 부모의 url을 doit-main으로 넣으라는것.
+        window.close();
+        // 현재 창 닫기
+      }
+      </script>
 </body>
 </html>

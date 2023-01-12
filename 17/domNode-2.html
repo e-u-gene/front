@@ -22,10 +22,12 @@
   </div>
   <script>
     function addP() {
-      var newP = document.createElement("p");
-      var txtNode = document.createTextNode("DOM은 Document Object Model의 줄임말입니다.");
+      let newP = document.createElement("p");
+      let txtNode = document.createTextNode("DOM은 Document Object Model의 줄임말입니다.");
       newP.appendChild(txtNode);
+      //<p>DOM은 Document Object Model의 줄임말입니다.</p>
       document.getElementById("info").appendChild(newP);
+      //여기서 info가 부모노드고 newp가 자식노드이다.
     }
   </script>
 </body>

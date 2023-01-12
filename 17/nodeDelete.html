@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Web Programming</title>
-	<link rel="stylesheet" href="css/nodelist.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Programming</title>
+  <link rel="stylesheet" href="css/nodelist.css">
 </head>
+
 <body>
   <div id="container">
     <h1>Web Programming</h1>
@@ -15,22 +17,41 @@
       <input type="text" id="subject" autofocus>
       <button onclick="newRegister(); return false;">추가</button>
     </form>
-    <hr>  
-    <ul id="itemList"> </ul>  
+    <hr>
+    <ul id="itemList">
+    </ul>
+   
   </div>
 
-	<script>
+  <script>
     function newRegister() {
-      var newItem = document.createElement("li");  // 요소 노드 추가
-      var subject = document.querySelector("#subject");  // 폼의 텍스트 필드
-      var newText = document.createTextNode(subject.value);  // 텍스트 필드의 값을 텍스트 노드로 만들기
-      newItem.appendChild(newText);  // 텍스트 노드를 요소 노드의 자식 노드로 추가
+      var newItem = document.createElement("li"); 
+       // 요소 노드 추가
+      var subject = document.querySelector("#subject"); 
+       // 폼의 텍스트 필드
+      var newText = document.createTextNode(subject.value);  
+      // 텍스트 필드의 값을 텍스트 노드로 만들기
+      newItem.appendChild(newText);  
+      // 텍스트 노드를 요소 노드의 자식 노드로 추가
 
-      var itemList = document.querySelector("#itemList");  // 웹 문서에서 부모 노드 가져오기 
-      itemList.insertBefore(newItem, itemList.childNodes[0]);  // 자식 노드중 첫번째 노드 앞에 추가
+      var itemList = document.querySelector("#itemList"); 
+       // 웹 문서에서 부모 노드 가져오기 
+      itemList.insertBefore(newItem, itemList.childNodes[0]);  
+      // 자식 노드중 첫번째 노드 앞에 추가, 
+      // 첫번째 노드에 계속 대입해서 젤 최근에 넣은게 젤 앞에 나오도록
 
-      subject.value="";
+      subject.value = "";
+
+      var items = document.querySelectorAll("li");
+      for(i =0; i<items.length; i++){
+        items[i].addEventListener("click",function(){
+          // 항목 클릭하는 이벤트 발생시 수행할 함수!
+          if(this.parentNode)// 클릭한 this에 parentNode가 있다면
+            this.parentNode.removeChild(this);
+        });
+      }
     }
-	</script>
+  </script>
 </body>
+
 </html>

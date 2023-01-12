@@ -7,7 +7,9 @@
 </head>
 <body>
 	<button onclick="inntext()">innerText로 표시하기</button>
+	//클릭시에 innertext 메소드 실행
 	<button onclick="innhtml()">innerHTML로 표시하기</button>
+	// 클릭시에 innhtml 메소드 실행
 	<h1>현재 시각: </h1>
 	<div id="current"></div>
 	
@@ -16,9 +18,11 @@
 
 		function inntext(){
 			document.getElementById("current").innerText = now;
+			// id를 선택하는것 innertext 프로퍼티-> 텍스트 내용 지정
 		}
 		function innhtml() {
 			document.getElementById("current").innerHTML = "<em>" + now + "</em>";
+			// innerHTML은  태그까지 포함해서 텍스트 내용지정
 		}
 	</script>
 </body>
