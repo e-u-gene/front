@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>Ajax</title>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	//<![CDATA[
+	$(function() {
+		$("#member").on("submit", function(){
+			// form에서 submit 이벤트 발생시 function 수행하라!
+			var d = $(this).serialize(); // 폼 요소를 시리즈화 한다.
+			//즉, username = 홍길동 & passwd = diq 처럼 시리즈화된 요소를 var d에 대입
+			alert(d);
+		$.ajax({
+			url : "welcome.jsp",//서버파일에 요청
+			type: "post", // 전송방식이 post 방식
+			data : d, // 전송할 데이터
+			success: function(result){
+				$("#txt1").html(result);
+			} // 성공하면 success 실행
+			
+			});
+		
+			return false;// form에 action페이지로 이동하는 것을 차단한다.
+			// jqeury로 내용 처리하려고 위에 적은것!
+		});
+		
+	});
+	//]]>
+</script>
+</head>
+<body>
+	<form action="member.jsp" method="post" name="member" id="member">
+	<!-- 확인 버튼을 누르면 "member.jsp"로 가고, 방법이 post 방식이라는 뜻.-->
+		<fieldset>
+			<legend>회원가입</legend>
+			<p>
+				<label for="username">이름</label> <input type="text" name="username"
+					id="username" />
+			</p>
+			<p>
+				<label for="passwd">비밀번호</label> <input type="password"
+					name="passwd" id="passwd" />
+			</p>
+			<p>
+				<input type="submit" value="확인" />
+			</p>
+		</fieldset>
+	</form>
+	<h1 id="txt1"></h1>
+</body>
+</html>
